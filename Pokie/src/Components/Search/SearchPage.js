@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   FlatList,
   ActivityIndicator,
+  StyleSheet,
 } from "react-native";
 import { Card, Image, Icon } from "react-native-elements";
 import axios from "axios";
@@ -16,6 +17,22 @@ const SearchPage = ({ navigation }) => {
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+
+  useEffect(() => {
+    navigation.setOptions({
+      headerRight: () => (
+        <TouchableOpacity onPress={() => navigation.navigate("Bookmarks")}>
+          <Icon
+            name="bookmark"
+            type="material"
+            color="black"
+            size={28}
+            style={styles.bookmarkIcon}
+          />
+        </TouchableOpacity>
+      ),
+    });
+  }, [navigation]);
 
   const handleSearch = async () => {
     try {
