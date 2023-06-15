@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import SearchPage from './src/Components/SearchPage';
+import SearchPage from './src/Components/Search/SearchPage';
 import DetailsPage from './src/Components/DetailsPage';
 import BookmarksScreen from './src/Components/BookmarksScreen';
 import { BookmarksProvider } from './src/Components/BookmarksContext';
