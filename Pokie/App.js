@@ -6,6 +6,7 @@ import DetailsPage from "./src/Components/Details/DetailsPage";
 import BookmarksScreen from "./src/Components/Bookmarks/BookmarksScreen";
 import { BookmarksProvider } from "./src/Components/BookmarksContext";
 
+
 const Stack = createStackNavigator();
 
 const App = () => {
